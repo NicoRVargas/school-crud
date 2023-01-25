@@ -3,20 +3,24 @@
 
 #include "../include/Teacher.h"
 
-Teacher::~Teacher(){}
+Teacher::~Teacher() {}
 
-void Teacher::setSubject(std::string subject){
+void Teacher::setSubject(std::string subject)
+{
     this->subject = subject;
 }
 
-void Teacher::setClasses(std::vector<std::string> &classes){
+void Teacher::setClasses(std::vector<std::string> &classes)
+{
     this->classes = classes;
 }
 
-std::string Teacher::getSubject(){
+std::string Teacher::getSubject()
+{
     return this->subject;
 }
 
-std::vector<std::string> Teacher::getClasses(){
+std::vector<std::string> Teacher::getClasses()
+{
     return this->classes;
 }

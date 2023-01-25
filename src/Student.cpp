@@ -3,23 +3,29 @@
 
 #include "../include/Student.h"
 
-Student::~Student(){}
+Student::~Student() {}
 
-void Student::setStudentClass(int studentClass){
+void Student::setStudentClass(int studentClass)
+{
     this->studentClass = studentClass;
 }
-void Student::setAttendance(int attendance){
+void Student::setAttendance(int attendance)
+{
     this->attendance = attendance;
 }
-std::string Student::getStudentID(){
+std::string Student::getStudentID()
+{
     return this->studentID;
 }
-std::vector<double> Student::getGrades(){
+std::vector<double> Student::getGrades()
+{
     return this->grades;
 }
-int Student::getStudentClass(){
+int Student::getStudentClass()
+{
     return this->studentClass;
 }
-int Student::getAttendance(){
+int Student::getAttendance()
+{
     return this->attendance;
 }

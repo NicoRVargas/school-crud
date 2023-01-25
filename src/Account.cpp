@@ -5,13 +5,13 @@
 
 Account::Account(
     std::string name,
-    std::string surname, 
+    std::string surname,
     std::string cpf,
-    std::string phoneNumber, 
+    std::string phoneNumber,
     std::string email,
-    std::string password, 
+    std::string password,
     std::string occupation,
-    std::string gender, 
+    std::string gender,
     std::string birthday)
 {
 
@@ -26,40 +26,51 @@ Account::Account(
     this->birthday = birthday;
 }
 
-Account::~Account(){}
+Account::~Account() {}
 
-std::string Account::getName(){
+std::string Account::getName()
+{
     return this->name;
-} 
-std::string Account::getSurname(){
+}
+std::string Account::getSurname()
+{
     return this->surname;
 }
-std::string Account::getCpf(){
+std::string Account::getCpf()
+{
     return this->cpf;
 }
-std::string Account::getPhoneNumber(){
+std::string Account::getPhoneNumber()
+{
     return this->phoneNumber;
 }
-std::string Account::getEmail(){
+std::string Account::getEmail()
+{
     return this->email;
 }
-std::string Account::getPassword(){
+std::string Account::getPassword()
+{
     return this->password;
 }
-std::string Account::getOccupation(){
+std::string Account::getOccupation()
+{
     return this->occupation;
 }
-std::string Account::getGender(){
+std::string Account::getGender()
+{
     return this->gender;
 }
-std::string Account::getBirthday(){
+std::string Account::getBirthday()
+{
     return this->birthday;
 }
 
-void Account::setEmail(std::string email){
+void Account::setEmail(std::string email)
+{
     this->email = email;
 }
 
-void Account::setPassword(std::string password){
+void Account::setPassword(std::string password)
+{
     this->password = password;
 }
