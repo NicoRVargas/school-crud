@@ -1,6 +1,10 @@
+#ifndef TEACHER_H
+#define TEACHER_H
+
 #include <iostream>
 #include <string>
 #include <vector>
+
 #include "Employee.h"
 
 class Teacher : public Employee{
@@ -9,7 +13,8 @@ private:
     std::vector<std::string> classes;
 
 public:
-    Teacher(std::string name,
+    Teacher(
+        std::string name,
         std::string surname, 
         std::string cpf,
         std::string phoneNumber, 
@@ -30,3 +35,5 @@ public:
     std::string getSubject();
     std::vector<std::string> getClasses();
 };
+
+#endif

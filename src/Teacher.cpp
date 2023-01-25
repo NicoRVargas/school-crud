@@ -1,6 +1,7 @@
 #include <iostream>
-#include "Teacher.h"
 #include <string>
+
+#include "../include/Teacher.h"
 
 Teacher::~Teacher(){}
 

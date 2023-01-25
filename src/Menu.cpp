@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
-#include "Menu.h"
 #include <unistd.h>
-#include "AccountValidator.h"
+
+#include "../include/Menu.h"
+#include "../include/AccountValidator.h"
 
 Menu::Menu(){
     AccountValidator* accountValidator = new AccountValidator;

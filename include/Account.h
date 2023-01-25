@@ -1,3 +1,6 @@
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
+
 #include <iostream>
 #include <string>
 
@@ -39,3 +42,5 @@ public:
     void setEmail(std::string email);
     void setPassword(std::string password); 
 };
+
+#endif

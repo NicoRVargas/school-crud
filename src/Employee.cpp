@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "Employee.h"
+
+#include "../include/Employee.h"
 
 Employee::~Employee(){}
 

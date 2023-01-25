@@ -1,5 +1,9 @@
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
+
 #include <iostream>
 #include <string>
+
 #include "Account.h"
 
 class Employee : public Account{
@@ -25,3 +29,5 @@ public:
     void setShift(std::string shift);
     double annualSalary();
 };
+
+#endif

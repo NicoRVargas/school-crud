@@ -1,3 +1,6 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -34,3 +37,5 @@ public:
     int getStudentClass();
     int getAttendance();
 };
+
+#endif
