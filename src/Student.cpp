@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "../include/Student.h"
 
@@ -12,6 +13,10 @@ void Student::setStudentClass(int studentClass)
 void Student::setAttendance(int attendance)
 {
     this->attendance = attendance;
+}
+void Student::setSubjects(std::vector<std::string> subjects)
+{
+    this->subjects = subjects;
 }
 std::string Student::getStudentID()
 {
@@ -28,4 +33,8 @@ int Student::getStudentClass()
 int Student::getAttendance()
 {
     return this->attendance;
+}
+std::vector<std::string> Student::getSubjects()
+{
+    return this->subjects;
 }

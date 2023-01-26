@@ -13,11 +13,12 @@ Menu::Menu()
     std::string password;
 
     std::cout << "Welcome to Hogwarts System\n\n";
-    sleep(2);
+    sleep(1);
     
     std::cout << "User: ";
     std::cin >> email;
-    
+    sleep(0.5);
+
     std::cout << "\nPassword: ";
     std::cin >> password;
     

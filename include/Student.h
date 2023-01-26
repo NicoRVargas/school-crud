@@ -11,6 +11,7 @@ class Student : public Account
 private:
     std::string studentID;
     std::vector<double> grades;
+    std::vector<std::string> subjects;
     int studentClass;
     int attendance;
 
@@ -25,11 +26,13 @@ public:
             std::string gender,
             std::string birthday,
             std::string studentID,
-            int studentClass)
+            int studentClass,
+            std::vector<std::string> subjects)
         : Account(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday)
     {
         this->studentID = studentID;
         this->studentClass = studentClass;
+        this->subjects = subjects;
     }
     
     ~Student();
@@ -37,6 +40,8 @@ public:
     void setStudentClass(int studentClass);
     
     void setAttendance(int attendance);
+
+    void setSubjects(std::vector<std::string> subjects);
     
     std::string getStudentID();
     
@@ -45,6 +50,8 @@ public:
     int getStudentClass();
     
     int getAttendance();
+
+    std::vector<std::string> getSubjects();
 };
 
 #endif
