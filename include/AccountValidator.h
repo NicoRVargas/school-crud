@@ -3,15 +3,21 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <optional>
+
+#include "Account.h"
 
 class AccountValidator
 {
+private:
+    std::vector<Account*> data;
 public:
     AccountValidator();
 
     ~AccountValidator();
 
-    bool validation(std::string email, std::string password);
+    std::optional<Account*> validation(std::string email, std::string password);
 };
 
 #endif

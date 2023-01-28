@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <optional>
 #include <unistd.h>
 
 #include "../include/Account.h"
@@ -26,7 +27,9 @@ Menu::Menu()
     std::cout << "\nPassword: ";
     std::cin >> password;
     
-    if (accountValidator->validation(email, password))
+    std::optional<Account*> optional = accountValidator->validation(email, password);
+
+    if (optional)
     {
         std::cout << "\nLogging...";
     }
