@@ -12,7 +12,8 @@ Account::Account(
     std::string password,
     std::string occupation,
     std::string gender,
-    std::string birthday)
+    std::string birthday,
+    int type)
 {
 
     this->name = name;
@@ -24,6 +25,7 @@ Account::Account(
     this->occupation = occupation;
     this->gender = gender;
     this->birthday = birthday;
+    this->type = type;
 }
 
 Account::~Account() {}
@@ -63,6 +65,11 @@ std::string Account::getGender()
 std::string Account::getBirthday()
 {
     return this->birthday;
+}
+
+int Account::getType()
+{
+    return this->type;
 }
 
 void Account::setEmail(std::string email)

@@ -22,8 +22,9 @@ public:
         std::string password,
         std::string occupation,
         std::string gender,
-        std::string birthday)
-        : Account(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday) {}
+        std::string birthday,
+        int type)
+        : Account(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday, type) {}
 
     ~Employee();
 

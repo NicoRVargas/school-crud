@@ -24,9 +24,10 @@ public:
         std::string occupation,
         std::string gender,
         std::string birthday,
+        int type,
         std::string subject,
         std::vector<std::string> &classes)
-        : Employee(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday)
+        : Employee(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday, type)
     {
         this->subject = subject;
         this->classes = classes;

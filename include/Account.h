@@ -16,6 +16,7 @@ private:
     std::string occupation;
     std::string gender;
     std::string birthday;
+    int type;
 
 public:
     Account(
@@ -27,7 +28,8 @@ public:
         std::string password,
         std::string occupation,
         std::string gender,
-        std::string birthday);
+        std::string birthday,
+        int type);
     
     ~Account();
 
@@ -40,6 +42,8 @@ public:
     std::string getOccupation();
     std::string getGender();
     std::string getBirthday();
+    int getType();
+
 
     void setEmail(std::string email);
     void setPassword(std::string password);

@@ -2,6 +2,8 @@
 #include <string>
 #include <unistd.h>
 
+#include "../include/Account.h"
+#include "../include/DirectionBoard.h"
 #include "../include/Menu.h"
 #include "../include/AccountValidator.h"
 
@@ -11,6 +13,8 @@ Menu::Menu()
 
     std::string email;
     std::string password;
+
+    Account* Nicolas = new DirectionBoard("Nicolas", "Vargas", "129381", "519381239", "nico@gmail.com", "123", "DirectionBoard", "Masculino", "11/02/2004", "Director", 1);
 
     std::cout << "Welcome to Hogwarts System\n\n";
     sleep(1);

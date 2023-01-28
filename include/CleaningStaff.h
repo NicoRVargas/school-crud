@@ -22,8 +22,9 @@ public:
         std::string occupation,
         std::string gender,
         std::string birthday,
-        std::string role)
-        : Employee(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday)
+        std::string role,
+        int type)
+        : Employee(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday, type)
     {
         this->role = role;
     }

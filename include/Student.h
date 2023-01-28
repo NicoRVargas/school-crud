@@ -25,10 +25,11 @@ public:
             std::string occupation,
             std::string gender,
             std::string birthday,
+            int type,
             std::string studentID,
             int studentClass,
             std::vector<std::string> subjects)
-        : Account(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday)
+        : Account(name, surname, cpf, phoneNumber, email, password, occupation, gender, birthday, type)
     {
         this->studentID = studentID;
         this->studentClass = studentClass;

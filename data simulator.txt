@@ -1,0 +1,4 @@
+nicolas@gmail.com|123|0
+joaoruas@gmail.com|1234|1
+pedrocarvalho@gmail.com|123|2
+pedrinho@gmail.com|321|3
