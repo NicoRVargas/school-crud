@@ -8,36 +8,54 @@
 #include "../include/Menu.h"
 #include "../include/AccountValidator.h"
 
-Menu::Menu()
+Menu::Menu() {}
+
+Menu::~Menu() {}
+
+void Menu::run()
+{
+    std::cout << "Welcome to Hogwarts System\n\n";
+    sleep(0.5);
+
+    Account* user = loginScreen();
+}
+
+Account* Menu::loginScreen()
 {
     AccountValidator *accountValidator = new AccountValidator;
 
     std::string email;
     std::string password;
 
-    Account* Nicolas = new DirectionBoard("Nicolas", "Vargas", "129381", "519381239", "nico@gmail.com", "123", "DirectionBoard", "Masculino", "11/02/2004", "Director", 1);
+    std::optional<Account *> optional;
 
-    std::cout << "Welcome to Hogwarts System\n\n";
-    sleep(1);
-    
-    std::cout << "User: ";
-    std::cin >> email;
-    sleep(0.5);
-
-    std::cout << "\nPassword: ";
-    std::cin >> password;
-    
-    std::optional<Account*> optional = accountValidator->validation(email, password);
-
-    if (optional)
+    do
     {
-        std::cout << "\nLogging...";
-    }
+        std::cout << "\nUser: ";
+        std::cin >> email;
+        sleep(0.5);
 
-    else
-    {
-        std::cout << "\nWrong user or password, try again.";
-    }
+        std::cout << "\nPassword: ";
+        std::cin >> password;
+
+        optional = accountValidator->validation(email, password);
+
+        if (!optional)
+        {
+            std::cout << "\nWrong user or password, try again.";
+        }
+
+    } while (!optional);
+
+    return optional.value();
 }
 
-Menu::~Menu() {}
+void Menu::homeScreen(int homeScreenType)
+{
+    switch(homeScreenType)
+    {
+        case 1:
+        
+    }
+
+}

@@ -10,6 +10,12 @@ public:
     Menu();
     
     ~Menu();
+
+    void run();
+
+    Account* loginScreen();
+
+    void homeScreen(int homeScreenType);
 };
 
 #endif

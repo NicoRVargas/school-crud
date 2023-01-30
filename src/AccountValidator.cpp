@@ -17,9 +17,9 @@ AccountValidator::AccountValidator()
 
     std::vector<Account *> data{
         new DirectionBoard("Nicolas", "Vargas", "129381", "519381239", "nico@gmail.com", "1", "DirectionBoard", "Masculino", "11/02/2004", "Director", 1),
-        new Student("Pedro", "Carvalho", "5343141", "513213139", "pedro@gmail.com", "2", "Student", "Masculino", "15/04/2004", 3, "532413", 301, subjects),
-        new CleaningStaff("Nicolas", "Vargas", "129381", "519381239", "joao@gmail.com", "3", "CleaningStaff", "Masculino", "11/02/2004", "Person", 2),
-        new Teacher("Joao", "Vargas", "129381", "519381239", "kawan@gmail.com", "4", "Math Teacher", "Masculino", "11/02/2004", 1213, "Math", classes)};
+        new Student("Pedro", "Carvalho", "5343141", "513213139", "pedro@gmail.com", "2", "Student", "Masculino", "15/04/2004", 4, "532413", 301, subjects),
+        new CleaningStaff("Joao", "Ruas", "129381", "519381239", "joao@gmail.com", "3", "CleaningStaff", "Masculino", "12/04/2003", "Person", 3),
+        new Teacher("Kawan", "Miranda", "129381", "519381239", "kawan@gmail.com", "4", "Math Teacher", "Masculino", "22/10/2003", 2, "Math", classes)};
 
     this->data = data;
 }
