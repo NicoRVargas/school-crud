@@ -4,13 +4,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
 #include "Account.h"
 
 class Student : public Account
 {
 private:
     std::string studentID;
-    std::vector<double> grades;
+    std::vector<double> grades{10, 11, 12};
     std::vector<std::string> subjects;
     int studentClass;
     int attendance;
@@ -35,26 +36,28 @@ public:
         this->studentClass = studentClass;
         this->subjects = subjects;
     }
-    
+
     ~Student();
-    
+
     void setStudentClass(int studentClass);
-    
+
     void setAttendance(int attendance);
 
     void setSubjects(std::vector<std::string> subjects);
-    
+
     std::string getStudentID();
-    
+
     std::vector<double> getGrades();
-    
+
     int getStudentClass();
-    
+
     int getAttendance();
 
     std::vector<std::string> getSubjects();
 
     void showStudentGrades();
+
+    void showStudentAccountInformation(Account *user);
 };
 
 #endif

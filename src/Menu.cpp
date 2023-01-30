@@ -2,11 +2,16 @@
 #include <string>
 #include <optional>
 #include <unistd.h>
+#include <typeinfo>
 
 #include "../include/Account.h"
 #include "../include/DirectionBoard.h"
 #include "../include/Menu.h"
 #include "../include/AccountValidator.h"
+#include "../include/Student.h"
+#include "../include/Teacher.h"
+#include "../include/DirectionBoard.h"
+#include "../include/CleaningStaff.h"
 
 Menu::Menu() {}
 
@@ -14,14 +19,35 @@ Menu::~Menu() {}
 
 void Menu::run()
 {
-    std::cout << "Welcome to Hogwarts System\n\n";
-    sleep(0.5);
+    bool running = true;
+    int option;
+    while (running)
+    {
+        std::cout << "Welcome to Hogwarts System\n";
+        sleep(0.5);
+        std::cout << "Do you wish to: \n"
+                     "[1] - Login\n"
+                     "[2] - Exit\n";
+        std::cin >> option;
+        switch (option)
+        {
+        case 1:
+        {
+            Account *user = loginScreen();
+            homeScreen(user->getType(), user);
+            break;
+        }
 
-    Account* user = loginScreen();
-    homeScreen(user->getType(), user);
+        case 2:
+        {
+            running = false;
+            break;
+        }
+        }
+    }
 }
 
-Account* Menu::loginScreen()
+Account *Menu::loginScreen()
 {
     AccountValidator *accountValidator = new AccountValidator;
 
@@ -51,37 +77,75 @@ Account* Menu::loginScreen()
     return optional.value();
 }
 
-void Menu::homeScreen(int homeScreenType, Account* user)
+void Menu::directionBoardMenu(Account *user)
 {
-    switch(homeScreenType)
-    {
+}
+
+void Menu::teacherMenu(Account *user)
+{
+}
+
+void Menu::cleaningStaffMenu(Account *user)
+{
+}
+
+void Menu::studentMenu(Account *user)
+{
     int screenOperation;
-
-        case 1:
-        std::cout << "caso 1";
-        break;
-
-        case 2:
-        std::cout << "caso 2";
-        break;
-
-        case 3: 
-        std::cout << "caso 3";
-        break;
-
-        case 4:
+    do
+    {
         std::cout << "Inform the operation you want to realize. \n"
-                    "[1] - See grades. \n"
-                    "[2] - Account information. \n"
-                    "[3] - Attendance data. \n"
-                    "[4] - Logout. \n";
+                     "[1] - Show my grades. \n"
+                     "[2] - Account information. \n"
+                     "[3] - Attendance data. \n"
+                     "[4] - Logout. \n";
         std::cin >> screenOperation;
-            if(screenOperation == 1){
-                int teste = user->getType();
-                int teste2 = user->getStudentClass();
-                std::cout << teste << " " << teste2;
-            }
-        break;   
+        switch (screenOperation)
+        {
+        case 1:
+        {
+            ((Student *)user)->showStudentGrades();
+            break;
+        }
+        case 2:
+        {
+            ((Student *)user)->showStudentAccountInformation(user);
+            break;
+        }
+        case 3:
+        {
+            std::cout << "Caso 3";
+            break;
+        }
+        }
+    } while (screenOperation != 4);
+}
+void Menu::homeScreen(int homeScreenType, Account *user)
+{
+    switch (homeScreenType)
+    {
+    case 1:
+    {
+        directionBoardMenu(user);
+        break;
     }
 
+    case 2:
+    {
+        teacherMenu(user);
+        break;
+    }
+
+    case 3:
+    {
+        cleaningStaffMenu(user);
+        break;
+    }
+
+    case 4:
+    {
+        studentMenu(user);
+        break;
+    }
+    }
 }
