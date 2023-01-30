@@ -18,6 +18,7 @@ void Menu::run()
     sleep(0.5);
 
     Account* user = loginScreen();
+    homeScreen(user->getType(), user);
 }
 
 Account* Menu::loginScreen()
@@ -50,12 +51,37 @@ Account* Menu::loginScreen()
     return optional.value();
 }
 
-void Menu::homeScreen(int homeScreenType)
+void Menu::homeScreen(int homeScreenType, Account* user)
 {
     switch(homeScreenType)
     {
+    int screenOperation;
+
         case 1:
-        
+        std::cout << "caso 1";
+        break;
+
+        case 2:
+        std::cout << "caso 2";
+        break;
+
+        case 3: 
+        std::cout << "caso 3";
+        break;
+
+        case 4:
+        std::cout << "Inform the operation you want to realize. \n"
+                    "[1] - See grades. \n"
+                    "[2] - Account information. \n"
+                    "[3] - Attendance data. \n"
+                    "[4] - Logout. \n";
+        std::cin >> screenOperation;
+            if(screenOperation == 1){
+                int teste = user->getType();
+                int teste2 = user->getStudentClass();
+                std::cout << teste << " " << teste2;
+            }
+        break;   
     }
 
 }

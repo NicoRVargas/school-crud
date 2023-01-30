@@ -38,3 +38,10 @@ std::vector<std::string> Student::getSubjects()
 {
     return this->subjects;
 }
+void Student::showStudentGrades()
+{
+    std::vector<double> studentGrades = this->getGrades();
+    for (int i = 0; i < studentGrades.size(); i++){
+        std::cout << studentGrades[i] << " ";
+    }
+}

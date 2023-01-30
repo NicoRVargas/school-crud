@@ -21,3 +21,8 @@ std::vector<std::string> Teacher::getClasses()
 {
     return this->classes;
 }
+
+double Teacher::submitGrade()
+{
+    return 10;
+}

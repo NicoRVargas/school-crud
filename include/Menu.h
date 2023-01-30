@@ -15,7 +15,7 @@ public:
 
     Account* loginScreen();
 
-    void homeScreen(int homeScreenType);
+    void homeScreen(int homeScreenType, Account* user);
 };
 
 #endif

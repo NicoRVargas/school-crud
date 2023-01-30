@@ -53,6 +53,8 @@ public:
     int getAttendance();
 
     std::vector<std::string> getSubjects();
+
+    void showStudentGrades();
 };
 
 #endif

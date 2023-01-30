@@ -42,6 +42,8 @@ public:
     std::string getSubject();
 
     std::vector<std::string> getClasses();
+
+    double submitGrade();
 };
 
 #endif
