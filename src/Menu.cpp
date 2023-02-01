@@ -104,17 +104,17 @@ void Menu::studentMenu(Account *user)
         {
         case 1:
         {
-            ((Student *)user)->showStudentGrades();
+            ((Student*)user)->showStudentGrades();
             break;
         }
         case 2:
         {
-            ((Student *)user)->showStudentAccountInformation(user);
+            ((Student*)user)->showStudentAccountInformation(user);
             break;
         }
         case 3:
         {
-            std::cout << "Caso 3";
+            ((Student*)user)->getAttendance();
             break;
         }
         }
