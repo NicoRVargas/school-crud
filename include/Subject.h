@@ -16,8 +16,8 @@ public:
         std::string subjectName,
         std::vector<float> grades);
     ~Subject();
-    void addGrade(float grade);
-    void removeGrade(float grade);
+    void addGrade(std::vector<float> grades, float grade);
+    void removeGrade(std::vector<float> grades, int index);
     void changeGrade(int index, float newGrade);
     float getGrade(int index);
     float subjectAverage();
