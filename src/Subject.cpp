@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <string>
 
 #include "../include/Subject.h"
@@ -14,3 +14,4 @@ void removeGrade(std::vector<float> grades, int index)
 {
     grades.erase(index);                                   // DEU RUIM VOU TENTAR ARRUMAR AMANHÃ
 }
+*/

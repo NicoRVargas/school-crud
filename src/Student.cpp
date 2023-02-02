@@ -50,11 +50,11 @@ void Student::showStudentGrades() // VAMO TER Q FAZER UM TREM PRA ORDENAR AS MAT
 }
 void Student::showStudentAccountInformation(Account *user)
 {
-    std::cout << "Nome: " << user->getName() << " " << user->getSurname();
-    std::cout << "\nCPF: " << user->getCpf();
-    std::cout << "\nPhone Number: " << user->getPhoneNumber();
+    std::cout << "Name: " << user->getName() << " " << user->getSurname();
     std::cout << "\nEmail: " << user->getEmail();
     std::cout << "\nPassword: " << user->getPassword();
+    std::cout << "\nCPF: " << user->getCpf();
+    std::cout << "\nPhone Number: " << user->getPhoneNumber();
     std::cout << "\nGender: " << user->getGender();
     std::cout << "\nStudent ID: " << ((Student *)user)->getStudentID();
     std::cout << "\nBirthday: " << user->getBirthday();

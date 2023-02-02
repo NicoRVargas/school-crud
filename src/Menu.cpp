@@ -79,14 +79,80 @@ Account *Menu::loginScreen()
 
 void Menu::directionBoardMenu(Account *user)
 {
+    int screenOperation;
+    do
+    {
+        std::cout << "Inform the operation you want to realize. \n"
+                     "[1] - Show my salary. \n"
+                     "[2] - Account information. \n"
+                     "[3] - Logout. \n";
+        std::cin >> screenOperation;
+        switch (screenOperation)
+        {
+        case 1:
+        {
+            std::cout << ((DirectionBoard *)user)->getSalary() << "\n";
+            break;
+        }
+        case 2:
+        {
+            ((DirectionBoard *)user)->showDirectionBoardAccountInformation(user);
+            break;
+        }
+        }
+    } while (screenOperation != 3);
 }
 
 void Menu::teacherMenu(Account *user)
 {
+    int screenOperation;
+    do
+    {
+        std::cout << "Inform the operation you want to realize. \n"
+                     "[1] - Show my salary. \n"
+                     "[2] - Account information. \n"
+                     "[3] - Logout. \n";
+        std::cin >> screenOperation;
+        switch (screenOperation)
+        {
+        case 1:
+        {
+            std::cout << ((Teacher *)user)->getSalary() << "\n";
+            break;
+        }
+        case 2:
+        {
+            ((Teacher *)user)->showTeacherAccountInformation(user);
+            break;
+        }
+        }
+    } while (screenOperation != 3);
 }
 
 void Menu::cleaningStaffMenu(Account *user)
 {
+    int screenOperation;
+    do
+    {
+        std::cout << "Inform the operation you want to realize. \n"
+                     "[1] - Show my salary. \n"
+                     "[2] - Account information. \n"
+                     "[3] - Logout. \n";
+        std::cin >> screenOperation;
+        switch (screenOperation)
+        {
+        case 1:
+        {
+            std::cout << ((CleaningStaff *)user)->getSalary() << "\n";
+            break;
+        }
+        case 2:
+        {
+            ((CleaningStaff *)user)->showCleaningStaffAccountInformation(user);
+            break;
+        }
+        }
+    } while (screenOperation != 3);
 }
 
 void Menu::studentMenu(Account *user)
@@ -104,22 +170,25 @@ void Menu::studentMenu(Account *user)
         {
         case 1:
         {
-            ((Student*)user)->showStudentGrades();
+            ((Student *)user)->showStudentGrades();
             break;
         }
         case 2:
         {
-            ((Student*)user)->showStudentAccountInformation(user);
+            ((Student *)user)->showStudentAccountInformation(user);
             break;
         }
         case 3:
         {
-            ((Student*)user)->getAttendance();
+            ((Student *)user)->getAttendance();
             break;
         }
         }
     } while (screenOperation != 4);
 }
+
+// LEMBRETE PRA NOS DO FUTURO FAZER O INT SCREENOPERATION VIRAR STRING PRA NAO BUGAR TUDO SE O CARA ESCREVER UMA PALAVRA
+
 void Menu::homeScreen(int homeScreenType, Account *user)
 {
     switch (homeScreenType)

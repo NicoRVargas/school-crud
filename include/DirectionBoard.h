@@ -32,6 +32,8 @@ public:
     std::string getRole();
     
     ~DirectionBoard();
+
+    void showDirectionBoardAccountInformation(Account* user);
 };
 
 #endif

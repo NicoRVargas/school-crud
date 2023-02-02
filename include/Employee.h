@@ -9,7 +9,7 @@
 class Employee : public Account
 {
 private:
-    double salary;
+    double salary = 13513;
     std::string shift;
 
 public:

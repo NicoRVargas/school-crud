@@ -1,4 +1,4 @@
-#ifndef SUBJECT_H
+/*#ifndef SUBJECT_H
 #define SUBJECT_H
 
 #include <iostream>
@@ -24,3 +24,4 @@ public:
 };
 
 #endif
+*/

@@ -44,6 +44,8 @@ public:
     std::vector<std::string> getClasses();
 
     double submitGrade();
+
+    void showTeacherAccountInformation(Account *user);
 };
 
 #endif

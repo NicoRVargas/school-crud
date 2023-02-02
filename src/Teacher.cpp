@@ -26,3 +26,16 @@ double Teacher::submitGrade()
 {
     return 10;
 }
+
+void Teacher::showTeacherAccountInformation(Account *user)
+{
+    std::cout << "Name: " << user->getName() << " " << user->getSurname();
+    std::cout << "\nSubject: " << ((Teacher *)user)->getSubject() << " teacher";
+    std::cout << "\nEmail: " << user->getEmail();
+    std::cout << "\nPassword: " << user->getPassword();
+    std::cout << "\nCPF: " << user->getCpf();
+    std::cout << "\nPhone Number: " << user->getPhoneNumber();
+    std::cout << "\nGender: " << user->getGender();
+    std::cout << "\nBirthday: " << user->getBirthday();
+    std::cout << std::endl;
+}

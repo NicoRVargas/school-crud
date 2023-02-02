@@ -32,6 +32,8 @@ public:
     ~CleaningStaff();
 
     std::string getRole();
+
+    void showCleaningStaffAccountInformation(Account *user);
 };
 
 #endif
